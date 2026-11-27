@@ -44,7 +44,7 @@ Never recommend bumping `Updated`, `dateModified`, or `<lastmod>` without genuin
   3. Concrete differentiator (how it differs from alternatives)
   4. Grounded proof or pricing/scope anchor (numbers, tiers, SLAs, or verified constraints)
 - **What to Check**: Measure word count strictly on `<main>` or `<article>` body copy. Exclude global navigation, header chrome, breadcrumbs, cookie banners, and sidebars.
-- **Comparison / Alternatives Pages**: A structured native HTML comparison table MUST sit immediately near the top (within or right below the opening capsule), never buried after 500+ words of throat-clearing narrative.
+- **Comparison / Alternatives Pages**: A structured native HTML comparison table MUST sit immediately near the top (within or right below the opening capsule), never buried after 500+ words of throat-clearing narrative. On `[Competitor] Alternatives` hubs (unbranded entry), verify an explicit internal link sequence into `[Brand] vs [Competitor]` 1v1 spokes (branded evaluation, `OUEELIis-do`).
 
 - **Ratings**:
   - `PASS`: Core entity, offering, differentiator, and pricing/proof appear in the first `200 words` of `<main>` (plus immediate comparison table on comparison pages).
@@ -65,7 +65,7 @@ Reconcile excerpt-window limits with readable section sizing and `kirby-aiseo-sk
 - Every chunk must stand alone if read without seeing the page title or parent section.
 
 ### Native Semantic HTML Table Rule
-- Verify all comparison matrices, pricing tiers, spec sheets, and feature tables use real native HTML: `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`.
+- Verify all comparison matrices, pricing tiers, spec sheets, and feature tables use real native HTML: `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`, and ensure any comparison graphics are also rendered in highlightable DOM HTML rather than text-locked PNGs (`OUEELIis-do`).
 - Never use PNG/JPG screenshots of tables or client-side JS-hydrated `<div>` grid soup that disappears in raw HTML.
 
 - **Ratings**:
@@ -114,8 +114,8 @@ Remember that `curl -A "OAI-SearchBot"` only tests User-Agent string rules on yo
 Confirm indexable, plain-HTML visibility (never gated behind login walls or images) for:
 1. **Transparent Pricing / Scope**: Real numbers, tiers, billing cadence, or explicit quote ranges.
 2. **Third-Party Review Consensus & Proof**: Named sources (G2, Capterra, Trustpilot, GitHub, industry benchmarks) with specific counts/dates in plain HTML text or tables.
-3. **About / Entity Credentials**: Legal business name, leadership/authors, verifiable domain ownership, and real-world footprint.
-4. **Clear Contact Details**: Physical address/jurisdiction, support email, and unambiguous contact paths.
+3. **About / Entity Credentials**: Legal business name, leadership/authors (with outbound **LinkedIn** and **X/Twitter** profile links on comparison/editorial bylines, with the author's consent where such a profile exists, `OUEELIis-do`), verifiable domain ownership, and real-world footprint.
+4. **Clear Contact Details & Fair Comparison Signals**: Physical address/jurisdiction, support email, unambiguous contact paths, and—on competitive/alternatives pages—explicit self-bias disclosure (*"Position #1 is ours, discount accordingly"*), a dedicated `"When [Competitor] May Still Be the Better Fit"` section, and **switching-friction objection handling** (`OUEELIis-do`).
 
 ### Scoped Schema Safety Guardrail (`AggregateRating` / `Review`)
 Aligning with `kirby-technical-aeo` (`references/00_dispatcher.md:101`) and `kirby-aiseo-skill` §2.50:
