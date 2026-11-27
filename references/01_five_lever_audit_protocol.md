@@ -71,7 +71,7 @@ Reconcile excerpt-window limits with readable section sizing and `kirby-aiseo-sk
 - **Ratings**:
   - `PASS`: All core sections are `<= 175w` with `60-90w` atomic cores, zero ambiguous openers, and native HTML tables.
   - `NEEDS_WORK`: Sections span `176-220 words`, start with vague pronouns, or mix prose where a table belongs.
-  - `AT_RISK`: Sections exceed `220+ words` (wall-of-text), tables are image-based, or tables are JS-only `<div>` grids invisible in raw HTML.
+  - `AT_RISK`: Sections exceed `>220 words` (wall-of-text), tables are image-based, or tables are JS-only `<div>` grids invisible in raw HTML.
 
 ---
 
@@ -98,7 +98,7 @@ Check `robots.txt` stanzas and CDN/WAF rules separately for OpenAI's documented 
 4. `OAI-AdsBot`: Ads quality verification crawler (note in `robots.txt` audits if ads landing pages are audited).
 
 ### Recommended Live-Readability Check (IP-Allowlist Verification)
-Remember that `curl -A "OAI-SearchBot"` only tests User-Agent string rules on your server; it does **not** verify OpenAI's official IP-range allowlisting (`openai.com/searchbot.json`, `openai.com/chatgpt-user.json`, `openai.com/gptbot.json`) at Cloudflare/CDN/WAF layers. Recommend the user run a live-readability test (paste target URL directly into ChatGPT and ask it to quote/summarize the pricing or comparison table) to confirm no silent WAF/IP block exists.
+Remember that `curl -A "OAI-SearchBot"` only tests User-Agent string rules on your server; it does **not** verify OpenAI's official IP-range allowlisting (`openai.com/searchbot.json`, `openai.com/chatgpt-user.json`, `openai.com/gptbot.json`, `openai.com/adsbot.json`) at Cloudflare/CDN/WAF layers. Recommend the user run a live-readability test (public URLs only; never paste staging, preview, draft, or auth-token URLs into ChatGPT: paste target URL directly into ChatGPT and ask it to quote/summarize the pricing or comparison table) to confirm no silent WAF/IP block exists.
 
 - **Ratings**:
   - `PASS`: Clean self-referencing canonical, `HTTP 200` on raw GET check, SSR HTML complete, zero `noindex`/`nosnippet`/`max-snippet:0`, `OAI-SearchBot` allowed in `robots.txt`, and no WAF challenge observed (live ChatGPT read recommended to verify CDN IP allowlisting).

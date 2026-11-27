@@ -31,5 +31,5 @@ Copy the prompt below into your AI coding tool (Claude Code, Cursor, Windsurf, G
 Manual install (Claude Code reads `~/.claude/skills/`; Antigravity reads `~/.agents/skills/`; swap the target folder for your tool, and pin a release tag):
 
 ```bash
-git clone --branch v1.0.0 https://github.com/markkirby125/kirby-chatgpt-retrieval-auditor ~/.claude/skills/kirby-chatgpt-retrieval-auditor
+git clone --branch v1.0.1 https://github.com/markkirby125/kirby-chatgpt-retrieval-auditor ~/.claude/skills/kirby-chatgpt-retrieval-auditor
 ```

@@ -7,7 +7,7 @@
 Maintain strict separation between documented OpenAI crawler behavior, general web-standard best practices, and directional practitioner heuristics:
 - **OpenAI-Documented Facts**:
   - OpenAI documents four crawlers: `OAI-SearchBot` (ChatGPT Search indexing and citation; opted-out sites do not appear in ChatGPT Search answers, though they can still appear as navigational links), `ChatGPT-User` (live user-triggered on-demand fetching; `robots.txt` rules may not apply identically and disallowing it does not govern Search appearance), `GPTBot` (model training opt-out; disallowing `GPTBot` does not block ChatGPT Search, and if both `OAI-SearchBot` and `GPTBot` are allowed OpenAI may reuse crawl results across both), and `OAI-AdsBot` (ads quality verification).
-  - `robots.txt` updates can take up to ~24 hours to propagate. OpenAI publishes official crawler IP ranges at `openai.com/searchbot.json`, `openai.com/chatgpt-user.json`, and `openai.com/gptbot.json`.
+  - `robots.txt` updates can take up to ~24 hours to propagate. OpenAI publishes official crawler IP ranges at `openai.com/searchbot.json`, `openai.com/chatgpt-user.json`, `openai.com/gptbot.json`, and `openai.com/adsbot.json`.
 - **Web-Standard Best Practices (Honored by Google/Bing, Undocumented for OpenAI)**:
   - HTTP `200 OK`, SSR raw-HTML presence, clean self-referencing canonical tags, and absence of `noindex`, `nosnippet`, and `max-snippet:0` govern standard search indexability and snippet extraction in Google/Bing (and downstream search-backed fetches) and are safe baseline hygiene, though OpenAI does not document `nosnippet`, `max-snippet`, or canonical handling specifically for `OAI-SearchBot`.
 - **Directional Practitioner Heuristics (NOT published OpenAI constants)**:
